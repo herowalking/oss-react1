@@ -1,7 +1,7 @@
 export default {
     menus: [ // 菜单相关路由
-        { key: '/app/dashboard/index', title: '首页', icon: 'mobile', component: 'Dashboard' },
-        {
+        { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
+       /* {
             key: '/app/ui', title: 'UI', icon: 'scan',
             subs: [
                 { key: '/app/ui/buttons', title: '按钮', component: 'Buttons'},
@@ -51,17 +51,17 @@ export default {
                 { key: '/login', title: '登录' },
                 { key: '/404', title: '404' },
             ],
-        },
+        },*/
         {
-            key: '/app/auth', title: '权限管理', icon: 'safety',
+            key: '/app/auth', title: '任务', icon: 'safety',
             subs: [
-                { key: '/app/auth/basic', title: '基础演示', component: 'AuthBasic' },
-                { key: '/app/auth/routerEnter', title: '路由拦截', component: 'RouterEnter', auth: 'auth/testPage' },
+                { key: '/app/auth/basic', title: '待领任务', component: 'AuthBasic' },
+                { key: '/app/auth/routerEnter', title: '已领任务', component: 'RouterEnter', auth: 'auth/testPage' },
             ],
         },
-        {
+     /*   {
             key: '/app/cssModule', title: 'cssModule', icon: 'star', component: 'Cssmodule'
-        },
+        },*/
         {
             key: '/app/extension', title: '功能扩展', icon: 'bars',
             subs: [

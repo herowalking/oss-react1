@@ -1,22 +1,16 @@
-# react-admin
-react-admin system solution
+# oss-react
+OSS系统重新用react改写
 
-<img src="https://raw.githubusercontent.com/yezihaohao/react-admin/master/screenshots/logo.png" alt="logo" width="150" height="53" />
+
 
 ![travis-ci](https://travis-ci.org/yezihaohao/react-admin.svg?branch=master)
 
-### 文档地址：[wiki](https://github.com/yezihaohao/react-admin/wiki)
-
-### 问题和方案汇总：[issue](https://github.com/yezihaohao/react-admin/issues/12)
-
-### 更新日志迁移至[CHANGELOG.md](https://github.com/yezihaohao/react-admin/blob/master/CHANGELOG.md)😁
 
 ### 前言
-> 网上react后台管理开源免费的完整版项目比较少，所以利用空余时间集成了一个版本出来，已放到GitHub
-  启动和打包的时间都稍长，请耐心等待两分钟
+> OSS系统的新版本，使用react + ant design 重新设计
 
-- [GitHub地址](https://github.com/yezihaohao/react-admin)
-- [预览地址](https://admiring-dijkstra-34cb29.netlify.com)(已增加响应式，可手机预览😄)
+- [GitHub地址](https://github.com/herowalking/oss-react1)
+- [预览地址](http://192.168.22.249:8002)
 
 ### 依赖模块
 <span style="color: rgb(184,49,47);">项目是用create-react-app创建的，主要还是列出新加的功能依赖包</span>
@@ -51,19 +45,9 @@ react-admin system solution
 - 导航菜单
     - 顶部导航(菜单伸缩，全屏功能)
     - 左边菜单(增加滚动条以及适配路由的active操作)
-- UI模块
-    - 按钮(antd组件)
-    - 图标(antd组件并增加彩色表情符)
-    - 加载中(antd组件并增加顶部加载条)
-    - 通知提醒框(antd组件)
-    - 标签页(antd组件)
-    - 轮播图(ant动效组件)
-    - 富文本
-    - 拖拽
-    - 画廊
-- 动画
-    - 基础动画(animate.css所有动画)
-    - 动画案例
+- 任务
+    - 待领任务
+    - 已领任务
 - 表格
     - 基础表格(antd组件)
     - 高级表格(antd组件)
@@ -80,26 +64,7 @@ react-admin system solution
 ### 功能截图
 #### 首页
 ![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd1.gif)
-#### 按钮图标等
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd2.gif)
-#### 轮播图
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd3.gif)
-#### 富文本
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd4.gif)
-#### 拖拽
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd5.gif)
-#### 画廊
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd6.gif)
-#### 动画
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd7.gif)
-#### 表格
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd8.gif)
-#### 表单
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd9.gif)
-#### 图表
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd10.gif)
-#### 页面
-![截图](https://raw.githubusercontent.com/yezihaohao/yezihaohao.github.io/master/imgs/rd11.gif)
+
 
 ### 代码目录
 ```js
@@ -147,7 +112,7 @@ react-admin system solution
 
 ```js
 // 首推荐使用yarn装包
-yarn or npm i
+yarn or npm install
 ```
 ##### 3.启动项目
 ```js
@@ -163,10 +128,6 @@ yarn build or npm run build
 
 欢迎和感谢大家PR~~👏👏
 
-若有问题，可加QQ群与我交流
-
-- 1群：264591039（已满）
-- 2群：592688854（已满）
-- 3群：743490497
+若有问题，可在QQ群交流
 
 如果对你有帮助，给个star哟~~❤️❤️❤️❤️

@@ -79,7 +79,7 @@ class App extends Component {
                             <Routes auth={auth} onRouterChange={this._setTitle} />
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>
-                        React-Admin ©{new Date().getFullYear()} Created by 865470087@qq.com
+                        OSS-React ©{new Date().getFullYear()} Created by SSCC
                         </Footer>
                     </Layout>
                 </Layout>
