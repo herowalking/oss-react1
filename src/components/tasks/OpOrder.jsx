@@ -50,8 +50,8 @@ const data = [{
     address: 'Sidney No. 1 Lake Park',
 }];
 
-const BasicTable = () => (
+const OpOrder = () => (
     <Table columns={columns} dataSource={data} />
 );
 
-export default BasicTable;
+export default OpOrder;

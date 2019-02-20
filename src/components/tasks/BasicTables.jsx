@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { Row, Col, Card } from 'antd';
-import BasicTable from './BasicTable';
+import BasicTable from './OpOrder';
 import SelectTable from './SelectTable';
 import SortTable from './SortTable';
 import SearchTable from './SearchTable';
