@@ -1,7 +1,7 @@
 export default {
     menus: [ // 菜单相关路由
         { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
-       /* {
+        /*{
             key: '/app/ui', title: 'UI', icon: 'scan',
             subs: [
                 { key: '/app/ui/buttons', title: '按钮', component: 'Buttons'},
@@ -51,21 +51,34 @@ export default {
                 { key: '/login', title: '登录' },
                 { key: '/404', title: '404' },
             ],
-        },*/
+        },
         {
-            key: '/app/auth', title: '任务', icon: 'safety',
+            key: '/app/auth', title: '权限管理', icon: 'safety',
             subs: [
-                { key: '/app/auth/basic', title: '待领任务', component: 'AuthBasic' },
-                { key: '/app/auth/routerEnter', title: '已领任务', component: 'RouterEnter', auth: 'auth/testPage' },
+                { key: '/app/auth/basic', title: '基础演示', component: 'AuthBasic' },
+                { key: '/app/auth/routerEnter', title: '路由拦截', component: 'RouterEnter', auth: 'auth/testPage' },
             ],
         },
-     /*   {
+        {
             key: '/app/cssModule', title: 'cssModule', icon: 'star', component: 'Cssmodule'
-        },*/
+        },
         {
             key: '/app/extension', title: '功能扩展', icon: 'bars',
             subs: [
                 { key: '/app/extension/queryParams', title: '问号形式参数', component: 'QueryParams', query: '?param1=1&param2=2' },
+            ],
+        },*/
+        {
+            key: '/app/task', title: '任务', icon: 'bars',
+          /*  subs: [
+                { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
+                { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
+                { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
+            ],*/
+            subs: [
+                { key: '/app/task/basicTable', title: '待领任务', component: 'BasicTable'},
+                { key: '/app/task/advancedTable', title: '已领任务', component: 'AdvancedTable'},
+                { key: '/app/task/asynchronousTable', title: '已完成任务', component: 'AsynchronousTable'},
             ],
         },
     ],
