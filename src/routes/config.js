@@ -1,7 +1,7 @@
 export default {
-    menus: [ // 菜单相关路由
+    menus1: [ // 菜单相关路由
         { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
-        /*{
+        {
             key: '/app/ui', title: 'UI', icon: 'scan',
             subs: [
                 { key: '/app/ui/buttons', title: '按钮', component: 'Buttons'},
@@ -67,14 +67,30 @@ export default {
             subs: [
                 { key: '/app/extension/queryParams', title: '问号形式参数', component: 'QueryParams', query: '?param1=1&param2=2' },
             ],
-        },*/
+        },
         {
             key: '/app/task', title: '任务', icon: 'bars',
-          /*  subs: [
-                { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
-                { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
-                { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
-            ],*/
+            /*  subs: [
+                  { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
+                  { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
+                  { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
+              ],*/
+            subs: [
+                { key: '/app/task/OpOrder', title: '待领任务', component: 'OpOrder'},
+                { key: '/app/task/advancedTable', title: '已领任务', component: 'AdvancedTable'},
+                { key: '/app/task/asynchronousTable', title: '已完成任务', component: 'AsynchronousTable'},
+            ],
+        },
+    ],
+    menus2: [ // 菜单相关路由
+        { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
+        {
+            key: '/app/task', title: '任务2', icon: 'bars',
+            /*  subs: [
+                  { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
+                  { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
+                  { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
+              ],*/
             subs: [
                 { key: '/app/task/OpOrder', title: '待领任务', component: 'OpOrder'},
                 { key: '/app/task/advancedTable', title: '已领任务', component: 'AdvancedTable'},
