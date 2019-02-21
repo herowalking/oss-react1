@@ -114,7 +114,17 @@ class SiderCustom extends Component {
                                 openKeys={this.state.firstHide ? null : [this.state.openKey]}
                                 onOpenChange={this.openMenu}
                             />
-
+                        }
+                        {
+                            auth.uid === 3 &&
+                            <SiderMenu
+                                menus={routes.menus3}
+                                onClick={this.menuClick}
+                                mode="inline"
+                                selectedKeys={[this.state.selectedKey]}
+                                openKeys={this.state.firstHide ? null : [this.state.openKey]}
+                                onOpenChange={this.openMenu}
+                            />
                         }
 
                         <style>
