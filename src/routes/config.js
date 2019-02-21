@@ -1,4 +1,20 @@
 export default {
+    menus0: [ // 菜单相关路由
+        { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
+        {
+            key: '/app/task', title: '任务0', icon: 'bars',
+            /*  subs: [
+                  { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
+                  { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
+                  { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
+              ],*/
+            subs: [
+                { key: '/app/task/OpOrder', title: '待领任务', component: 'OpOrder'},
+                { key: '/app/task/advancedTable', title: '已领任务', component: 'AdvancedTable'},
+                { key: '/app/task/asynchronousTable', title: '已完成任务', component: 'AsynchronousTable'},
+            ],
+        },
+    ],
     menus1: [ // 菜单相关路由
         { key: '/app/dashboard/index', title: '总览', icon: 'mobile', component: 'Dashboard' },
         {
@@ -69,7 +85,7 @@ export default {
             ],
         },
         {
-            key: '/app/task', title: '任务', icon: 'bars',
+            key: '/app/task', title: '任务1', icon: 'bars',
             /*  subs: [
                   { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
                   { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },

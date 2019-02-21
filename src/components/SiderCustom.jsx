@@ -68,38 +68,69 @@ class SiderCustom extends Component {
     };
     render() {
         return (
-            <Sider
-                trigger={null}
-                breakpoint="lg"
-                collapsed={this.props.collapsed}
-                style={{ overflowY: 'auto' }}
-            >
-                <div className="logo" />
 
-                <AuthWidget
-                    children={auth => (
-                        <SiderMenu
-                            {...auth.uid == '1'}
-                            menus={routes.menus1}
-                            onClick={this.menuClick}
-                            mode="inline"
-                            selectedKeys={[this.state.selectedKey]}
-                            openKeys={this.state.firstHide ? null : [this.state.openKey]}
-                            onOpenChange={this.openMenu}
-                        />
+            <AuthWidget
+                children={auth => (
 
-                        )}
-                />
 
-                <style>
-                    {`
-                    #nprogress .spinner{
-                        left: ${this.state.collapsed ? '70px' : '206px'};
-                        right: 0 !important;
-                    }
-                    `}
-                </style>
-            </Sider>
+                    <Sider
+                        trigger={null}
+                        breakpoint="lg"
+                        collapsed={this.props.collapsed}
+                        style={{ overflowY: 'auto' }}
+                    >
+                        <div className="logo" />
+
+                        {
+                            !auth.uid &&
+                            <SiderMenu
+                                menus={routes.menus0}
+                                onClick={this.menuClick}
+                                mode="inline"
+                                selectedKeys={[this.state.selectedKey]}
+                                openKeys={this.state.firstHide ? null : [this.state.openKey]}
+                                onOpenChange={this.openMenu}
+                            />
+                        }
+
+                        {
+                            auth.uid === 1 &&
+                            <SiderMenu
+                                menus={routes.menus1}
+                                onClick={this.menuClick}
+                                mode="inline"
+                                selectedKeys={[this.state.selectedKey]}
+                                openKeys={this.state.firstHide ? null : [this.state.openKey]}
+                                onOpenChange={this.openMenu}
+                            />
+                        }
+                        {
+                            auth.uid === 2 &&
+                            <SiderMenu
+                                menus={routes.menus2}
+                                onClick={this.menuClick}
+                                mode="inline"
+                                selectedKeys={[this.state.selectedKey]}
+                                openKeys={this.state.firstHide ? null : [this.state.openKey]}
+                                onOpenChange={this.openMenu}
+                            />
+
+                        }
+
+                        <style>
+                            {`
+                            #nprogress .spinner{
+                                left: ${this.state.collapsed ? '70px' : '206px'};
+                                right: 0 !important;
+                            }
+                            `}
+                        </style>
+                    </Sider>
+
+
+                )}
+            />
+
         )
     }
 }
