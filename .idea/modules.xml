@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/oss-react1.iml" filepath="$PROJECT_DIR$/.idea/oss-react1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../oss-react/.idea/react-admin.iml" filepath="$PROJECT_DIR$/../oss-react/.idea/react-admin.iml" />
     </modules>
   </component>

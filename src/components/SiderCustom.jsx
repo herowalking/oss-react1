@@ -6,6 +6,7 @@ import { Layout } from 'antd';
 import { withRouter } from 'react-router-dom';
 import routes from '../routes/config';
 import SiderMenu from './SiderMenu';
+import AuthWidget from '@/components/widget/AuthWidget';
 
 const { Sider } = Layout;
 
@@ -74,14 +75,22 @@ class SiderCustom extends Component {
                 style={{ overflowY: 'auto' }}
             >
                 <div className="logo" />
-                <SiderMenu
-                    menus={routes.menus}
-                    onClick={this.menuClick}
-                    mode="inline"
-                    selectedKeys={[this.state.selectedKey]}
-                    openKeys={this.state.firstHide ? null : [this.state.openKey]}
-                    onOpenChange={this.openMenu}
+
+                <AuthWidget
+                    children={auth => (
+                        <SiderMenu
+                            {...auth.uid == '1'}
+                            menus={routes.menus1}
+                            onClick={this.menuClick}
+                            mode="inline"
+                            selectedKeys={[this.state.selectedKey]}
+                            openKeys={this.state.firstHide ? null : [this.state.openKey]}
+                            onOpenChange={this.openMenu}
+                        />
+
+                        )}
                 />
+
                 <style>
                     {`
                     #nprogress .spinner{
