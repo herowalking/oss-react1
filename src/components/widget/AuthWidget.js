@@ -12,6 +12,7 @@ class AuthWidget extends Component {
 
 const mapStateToProps = state => {
     const { auth = {data: {}} } = state.httpData;
+    console.log(state)
     console.log(auth)
     return { auth };
 };
