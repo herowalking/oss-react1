@@ -33,3 +33,6 @@ export const guest = () => get({ url: config.MOCK_AUTH_VISITOR });
 
 // 访问权限获取
 export const operator = () => get({ url: config.MOCK_AUTH_OPERATOR });
+
+// 待领任务
+export const getOpOrder = () => get({ url: config.MOCK_OpOrder });

@@ -7,6 +7,7 @@ import Loading from './widget/Loading';
 import BasicForm from './forms/BasicForm';
 import LoginForm from './forms/LoginForm';
 import OpOrder from './tasks/OpOrder';
+import OpOrderDetail from './tasks/OpOrderDetail';
 import AdvancedTable from './tasks/AdvancedTables';
 import AsynchronousTable from './tasks/AsynchronousTable';
 import Echarts from './charts/Echarts';
@@ -35,7 +36,7 @@ const WysiwygBundle = Loadable({ // 按需加载富文本配置
 });
 
 export default {
-    BasicForm, LoginForm, OpOrder, AdvancedTable, AsynchronousTable,
+    BasicForm, LoginForm, OpOrder, OpOrderDetail, AdvancedTable, AsynchronousTable,
     Echarts, Recharts, Icons, Buttons, Spins, Modals, Notifications,
     Tabs, Banners, Drags, Dashboard, Gallery, BasicAnimations,
     ExampleAnimations, AuthBasic, RouterEnter, WysiwygBundle,

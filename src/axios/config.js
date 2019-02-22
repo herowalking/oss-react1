@@ -12,6 +12,8 @@ export const MOCK_AUTH_VISITOR = MOCK_AUTH + '/visitor' // 访问权限接口
 
 export const MOCK_AUTH_OPERATOR = MOCK_AUTH2 + '/operator' // 操作权限接口
 
+export const MOCK_OpOrder = MOCK_AUTH2 + '/request/todoClaimRequest' //待领任务接口
+
 // github授权
 export const GIT_OAUTH = 'https://github.com/login/oauth';
 // github用户

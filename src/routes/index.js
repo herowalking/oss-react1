@@ -61,8 +61,11 @@ export default class CRouter extends Component {
                         })
                     )
                 }
+                <Route path='/app/task/OpOrder/:id' component={AllComponents.OpOrderDetail}></Route>
 
                 <Route render={() => <Redirect to="/404" />} />
+
+
             </Switch>
         )
     }

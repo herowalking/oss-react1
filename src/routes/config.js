@@ -79,13 +79,9 @@ export default {
         },
         {
             key: '/app/task', title: '任务1', icon: 'bars',
-            /*  subs: [
-                  { key: '/app/task/opOrder', title: '待领任务', component: 'OpOrder' },
-                  { key: '/app/task/opingOrder', title: '已领任务', component: 'OpingOrder' },
-                  { key: '/app/task/opDoneOrder', title: '已完成任务', component: 'OpDoneOrder' },
-              ],*/
             subs: [
-                { key: '/app/task/OpOrder', title: '待领任务', component: 'OpOrder'},
+                { key: '/app/task/OpOrder', title: '待领任务', component: 'OpOrder', },
+                // { key: '/app/task/OpOrder/:id', title: '待领任务详情', component: 'OpOrderDetail'},
                 { key: '/app/task/advancedTable', title: '已领任务', component: 'AdvancedTable'},
                 { key: '/app/task/asynchronousTable', title: '已完成任务', component: 'AsynchronousTable'},
             ],

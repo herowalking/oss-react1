@@ -5,12 +5,14 @@ import React from 'react';
 import { Table, Button, Row, Col, Card } from 'antd';
 import { getOpOrder } from '../../axios';
 import BreadcrumbCustom from '../BreadcrumbCustom';
+import OpOrderSummary from './orderComponents/OpOrderSummary'
+import OpOrderResource from './orderComponents/OpOrderResource'
 
 const columns = [{
     title: '任务单',
     dataIndex: 'requestId',
     width: 100,
-    render: (text, record) => <a href={'#/app/task/OpOrder/' + record.requestId} target="" rel="noopener noreferrer">{text}</a>
+    render: (text, record) => <a href={record.url} target="_blank" rel="noopener noreferrer">{text}</a>
 }, {
     title: '订单',
     dataIndex: 'orderId',
@@ -32,24 +34,11 @@ class AsynchronousTable extends React.Component {
         data: []
     };
     componentDidMount() {
+        console.log(this.props.match.params);
         this.start();
     }
     start = () => {
         this.setState({ loading: true });
-        /*getBbcNews().then(({ articles }) => {
-            this.setState({
-                data: articles,
-                loading: false
-            });*/
-
-        getOpOrder().then(({ data }) => {
-            this.setState({
-                data: data,
-                loading: false
-            });
-
-            console.log(data);
-        });
     };
     onSelectChange = (selectedRowKeys) => {
         console.log('selectedRowKeys changed: ', selectedRowKeys);
@@ -64,18 +53,15 @@ class AsynchronousTable extends React.Component {
         const hasSelected = selectedRowKeys.length > 0;
         return (
             <div className="gutter-example">
-                <BreadcrumbCustom first="任务" second="待领任务" />
+                <BreadcrumbCustom first="任务" second="待领任务详情" />
                 <Row gutter={16}>
                     <Col className="gutter-row" md={24}>
                         <div className="gutter-box">
-                            <Card title="待领任务" bordered={false}>
-                                <div style={{ marginBottom: 16 }}>
-                                    <Button type="primary" onClick={this.start}
-                                            disabled={loading} loading={loading}
-                                    >Reload</Button>
-                                    <span style={{ marginLeft: 8 }}>{hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}</span>
-                                </div>
-                                <Table rowSelection={rowSelection} columns={columns} dataSource={this.state.data} />
+                            <Card title="待领任务详情" bordered={false}>
+
+                                <OpOrderSummary />
+
+                                <OpOrderResource />
                             </Card>
                         </div>
                     </Col>
