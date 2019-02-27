@@ -118,7 +118,7 @@ class SiderCustom extends Component {
                         {
                             auth.uid === 3 &&
                             <SiderMenu
-                                menus={routes.menus3}
+                                menus={auth.menus}
                                 onClick={this.menuClick}
                                 mode="inline"
                                 selectedKeys={[this.state.selectedKey]}
